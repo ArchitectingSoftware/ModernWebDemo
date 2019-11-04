@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.15.
 
+1. `ng new ModernWebDemo` then `cd ModernWebDemo`
+2. `ng add @angular/material` to get some styling support - take defaults
+3. `ng serve` to start development server; go to `http://localhost:4200`
+4. `ng generate component navbar --skipTests` to generate our first component; code in `app/navbar`
+5. Lets add our first component - the navbar.  Prepare to use it via editing `app.module.ts` with `import {MatToolbarModule} from '@angular/material';`
+6. Now cleanup the `app.component.html`, delete everything and add the navbar component
+7. `ng generate component mainpage  --skipTests` and `ng generate component simple-content/simple-page  --skipTests`
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
