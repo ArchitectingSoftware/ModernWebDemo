@@ -1,0 +1,18 @@
+<mat-nav-list>
+    <a mat-list-item [routerLink]="'/'" (click)="onSidenavClose()">
+        <mat-icon>home</mat-icon>
+        <span class="nav-caption">Home</span>
+    </a>
+    <a mat-list-item [routerLink]="'/simple-state'" (click)="onSidenavClose()">
+        <mat-icon>grid_on</mat-icon>
+        <span class="nav-caption">Simple State</span>
+    </a>
+    <a mat-list-item [routerLink]="'/service-state'" (click)="onSidenavClose()">
+        <mat-icon>power</mat-icon>
+        <span class="nav-caption">Service State</span>
+    </a>
+    <a mat-list-item [routerLink]="'/redux-state'" (click)="onSidenavClose()">
+        <mat-icon>all_inclusive</mat-icon>
+        <span class="nav-caption">Redux State</span>
+    </a>
+</mat-nav-list>

@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-sm>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        <a mat-button [routerLink]="'/'"><h1>ModernWebDemo</h1></a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.lt-md>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+               <a class="md-caption" [routerLink]="'/simple-content'"> Simple Content </a>
+            </li>
+            <li>
+                <a [routerLink]="'/simple-state'"> Simple State</a>
+            </li>
+            <li>
+                <a [routerLink]="'/service-state'"> Service State </a>
+            </li>
+            <li>
+                <a [routerLink]="'/redux-state'"> Redux State </a>
+            </li>
+        </ul>
+    </div>
+</mat-toolbar>

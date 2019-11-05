@@ -19,6 +19,10 @@ import { ReduxStatePageComponent } from './redux-state/redux-state-page/redux-st
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { UxMaterialModuleModule } from './ux-material-module/ux-material-module.module';
+import { FlexLayoutModule} from '@angular/flex-layout';
+import { LayoutComponent } from './responsive/layout/layout.component';
+import { HeaderComponent } from './responsive/header/header.component';
+import { SidenavListComponent } from './responsive/sidenav-list/sidenav-list.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { UxMaterialModuleModule } from './ux-material-module/ux-material-module.
     ServiceStatePageComponent,
     ServiceStateCardComponent,
     ReduxStateCardComponent,
-    ReduxStatePageComponent
+    ReduxStatePageComponent,
+    LayoutComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +46,7 @@ import { UxMaterialModuleModule } from './ux-material-module/ux-material-module.
     FormsModule,
     BrowserAnimationsModule,
     UxMaterialModuleModule,
+    FlexLayoutModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

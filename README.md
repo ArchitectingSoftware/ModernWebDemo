@@ -4,11 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. `ng new ModernWebDemo` then `cd ModernWebDemo`
 2. `ng add @angular/material` to get some styling support - take defaults
-3. `ng serve` to start development server; go to `http://localhost:4200`
-4. `ng generate component navbar --skipTests` to generate our first component; code in `app/navbar`
-5. Lets add our first component - the navbar.  Prepare to use it via editing `app.module.ts` with `import {MatToolbarModule} from '@angular/material';`
-6. Now cleanup the `app.component.html`, delete everything and add the navbar component
-7. `ng generate component mainpage  --skipTests` and `ng generate component simple-content/simple-page  --skipTests`
+3. `yarn add @angular/flex-layout` to support some responsive features.  Also add support to `app.module.ts`
+4. `ng serve` to start development server; go to `http://localhost:4200`
+5. `ng generate component navbar --skipTests` to generate our first component; code in `app/navbar`
+6. Lets add our first component - the navbar.  Prepare to use it via editing `app.module.ts` with `import {MatToolbarModule} from '@angular/material';`
+7. Now cleanup the `app.component.html`, delete everything and add the navbar component
+8. `ng generate component mainpage  --skipTests` and `ng generate component simple-content/simple-page  --skipTests`
 
 
 ## Development server
