@@ -27,7 +27,11 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { ReduxStateListComponent } from './redux-state/redux-state-list/redux-state-list.component'
+import { ReduxStateListComponent } from './redux-state/redux-state-list/redux-state-list.component';
+import { ReduxAdvPageComponent } from './redux-state-advanced/redux-adv-page/redux-adv-page.component';
+import { ReduxAdvAddcourseComponent } from './redux-state-advanced/redux-adv-addcourse/redux-adv-addcourse.component';
+import { ReduxAdvRemovecourseComponent } from './redux-state-advanced/redux-adv-removecourse/redux-adv-removecourse.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,10 @@ import { ReduxStateListComponent } from './redux-state/redux-state-list/redux-st
     LayoutComponent,
     HeaderComponent,
     SidenavListComponent,
-    ReduxStateListComponent
+    ReduxStateListComponent,
+    ReduxAdvPageComponent,
+    ReduxAdvAddcourseComponent,
+    ReduxAdvRemovecourseComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +60,7 @@ import { ReduxStateListComponent } from './redux-state/redux-state-list/redux-st
     BrowserAnimationsModule,
     UxMaterialModuleModule,
     FlexLayoutModule,
+    HttpClientModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

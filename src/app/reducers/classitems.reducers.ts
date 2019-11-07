@@ -10,7 +10,7 @@ export interface ClassItemsState{
 }
 
 const initialState: ClassItemsState = {
-    items: [] // If you want to preload you can.... [{id: 1, name: "foo", score:100}]
+    items: [] // If you want to preload you can....[{id: 1, name: "foo", score:100}]
 }
 
 const myClassItemsReducer = createReducer(initialState,

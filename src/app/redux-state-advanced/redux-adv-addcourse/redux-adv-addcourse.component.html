@@ -1,0 +1,26 @@
+<mat-card style="margin-bottom:10px">
+    <mat-card-title>Redux Card - Add Course</mat-card-title>
+    <mat-card-content>
+    <p>Total Items in the List: {{ClassDescriptions.length}}</p>
+    <form  (ngSubmit)="onSubmit()" fxLayout="column">
+        <mat-form-field class="">
+            <input matInput placeholder="Course Id"
+            [(ngModel)] = "tmpCourse.id" name="id">
+        </mat-form-field>
+        <mat-form-field class="">
+                <input matInput placeholder="Course Code"
+                [(ngModel)] = "tmpCourse.id" name="code">
+        </mat-form-field>
+        <mat-form-field class="">
+                <input matInput placeholder="Course Level"
+                [(ngModel)] = "tmpCourse.level" name="level">
+        </mat-form-field>
+        <mat-form-field class="">
+                <input matInput placeholder="Course Title"
+                [(ngModel)] = "tmpCourse.title" name="title">
+        </mat-form-field>
+        
+        <button mat-raised-button type="submit" color="primary">Add to Redux Store</button>
+    </form>
+    </mat-card-content>
+</mat-card>

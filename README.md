@@ -10,6 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 6. Lets add our first component - the navbar.  Prepare to use it via editing `app.module.ts` with `import {MatToolbarModule} from '@angular/material';`
 7. Now cleanup the `app.component.html`, delete everything and add the navbar component
 8. `ng generate component mainpage  --skipTests` and `ng generate component simple-content/simple-page  --skipTests`
+9. Install jsonserver for mocking `npm install -g json-server`
 
 
 ## Development server
