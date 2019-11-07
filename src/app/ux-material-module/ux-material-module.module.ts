@@ -20,7 +20,8 @@ const MatModules = [
   MatInputModule,
   MatSidenavModule,
   MatListModule,
-  MatIconModule
+  MatIconModule,
+  MatListModule,
 ]
 
 @NgModule({

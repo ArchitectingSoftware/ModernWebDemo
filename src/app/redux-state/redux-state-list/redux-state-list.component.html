@@ -1,0 +1,12 @@
+
+
+<mat-card style="margin-bottom:10px">
+    <mat-card-title>Redux Class Item List - Remove Items</mat-card-title>
+    <mat-card-content>
+        <p>The items in the class list can be deleted by clicking on them below:</p>
+        <mat-action-list *ngFor="let classItem of ClassItems">
+            <button mat-list-item (click)="onDelete(classItem.id)">{{classItem.name}}</button>
+        </mat-action-list>
+    </mat-card-content>
+</mat-card>
+    

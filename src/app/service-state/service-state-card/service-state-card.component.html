@@ -1,18 +1,16 @@
-<mat-card style="max-width:600px; padding-bottom:10px; margin-left:auto; margin-right:auto; margin-bottom:20px">
-        <mat-card-title>{{cardName}}</mat-card-title>
-        <mat-card-content>
-        <p>Data from service:  <span>{{message}}</span></p>
-        <form  (ngSubmit)="onSubmit()">
-            <mat-form-field class="form-container">
-                <input matInput placeholder="Message Value"
-                [(ngModel)] = "tmpMessage" name="message">
-            </mat-form-field>
-            
-            
-            <button mat-raised-button type="submit" color="primary">Send Update</button>
+<mat-card style="margin-bottom:10px">
+    <mat-card-title>{{cardName}}</mat-card-title>
+    <mat-card-content>
+    <p>Data from service:  <span>{{message}}</span></p>
+    <form  (ngSubmit)="onSubmit()" fxLayout="column">
+        <mat-form-field class="">
+            <input matInput placeholder="Message Value"
+            [(ngModel)] = "tmpMessage" name="message">
+        </mat-form-field>
         
-        </form>
-        </mat-card-content>
-    </mat-card>
+        <button mat-raised-button type="submit" color="primary">Send Update</button>
+    </form>
+    </mat-card-content>
+</mat-card>
     
     

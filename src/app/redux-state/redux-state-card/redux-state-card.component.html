@@ -1,1 +1,15 @@
-<p>redux-state-card works!</p>
+<mat-card style="margin-bottom:10px">
+    <mat-card-title>Redux Card - Add Items</mat-card-title>
+    <mat-card-content>
+    <p>Total Items in the List: {{ClassItems.length}}</p>
+    <form  (ngSubmit)="onSubmit()" fxLayout="column">
+        <mat-form-field class="">
+            <input matInput placeholder="Add item to list"
+            [(ngModel)] = "tmpMessage" name="message">
+        </mat-form-field>
+        
+        <button mat-raised-button type="submit" color="primary">Add to Redux Store</button>
+    </form>
+    </mat-card-content>
+</mat-card>
+    

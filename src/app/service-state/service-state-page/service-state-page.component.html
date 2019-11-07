@@ -1,4 +1,6 @@
 
-<div *ngFor = "let i of [].constructor(5); let idx = index">
-        <app-service-state-card [cardName]="'Card '+(idx+1)"></app-service-state-card>
+<div fxFlex fxLayout="row wrap" fxLayoutGap="10px">
+        <div *ngFor = "let i of [].constructor(5); let idx = index" fxFlex="1 1 auto">
+                <app-service-state-card [cardName]="'Card '+(idx+1)"></app-service-state-card>
+        </div>
 </div>

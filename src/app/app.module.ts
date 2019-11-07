@@ -22,7 +22,12 @@ import { UxMaterialModuleModule } from './ux-material-module/ux-material-module.
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { LayoutComponent } from './responsive/layout/layout.component';
 import { HeaderComponent } from './responsive/header/header.component';
-import { SidenavListComponent } from './responsive/sidenav-list/sidenav-list.component'
+import { SidenavListComponent } from './responsive/sidenav-list/sidenav-list.component';
+import { EffectsModule } from '@ngrx/effects';
+import { AppEffects } from './app.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { ReduxStateListComponent } from './redux-state/redux-state-list/redux-state-list.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +43,8 @@ import { SidenavListComponent } from './responsive/sidenav-list/sidenav-list.com
     ReduxStatePageComponent,
     LayoutComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    ReduxStateListComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +60,8 @@ import { SidenavListComponent } from './responsive/sidenav-list/sidenav-list.com
         strictActionImmutability: true
       }
     }),
+    EffectsModule.forRoot([AppEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]

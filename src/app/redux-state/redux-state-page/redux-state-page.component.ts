@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { State } from '../../reducers'
 
 @Component({
   selector: 'app-redux-state-page',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReduxStatePageComponent implements OnInit {
 
-  constructor() { }
+  constructor( private store: Store<State>) { }
 
   ngOnInit() {
+    
+
+    //this.store.subscribe( action => console.log('DEBUG....', action.classItems.items[0]));
   }
 
 }
