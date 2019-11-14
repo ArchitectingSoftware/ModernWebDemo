@@ -1,0 +1,19 @@
+<mat-card style="margin-bottom:20px">
+    <mat-card-title>First Card</mat-card-title>
+    <mat-card-content>
+    <p>Data from cache:  <span style="color:purple; font-weight:bold">{{dataCacheValue}}</span></p>
+    <form  fxLayout="column">
+        <mat-form-field class="form-container">
+            <input matInput placeholder="Service Counter Value"
+            [(ngModel)] = "tmpCacheValue" name="tmpCacheValue" >
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutGap="10px">
+            <button mat-raised-button color="primary"
+                (click)="GetDataFromService()">Get Data From Service</button>
+            <button mat-raised-button color="primary"
+                (click)="SendDataToService()">Push Data To Service</button>
+        </div>
+    </form>
+    </mat-card-content>
+</mat-card>
+

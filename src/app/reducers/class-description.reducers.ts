@@ -4,7 +4,10 @@ import { loadCourseDescriptions,
             loadCourseFailure,
             deleteCourse,
             deleteCourseSuccess,
-            deleteCourseFailure} from './class-description.actions'
+            deleteCourseFailure,
+            addCourse,
+            addCourseSuccess,
+            addCourseFailure} from './class-description.actions'
 import { ClassDescription } from './class-description.model';
 
 
@@ -46,6 +49,21 @@ const myClassDescriptionsReducer = createReducer(initialState,
     }),
     on (deleteCourseFailure, (state, action) => {
         console.log('in delete course failure ',action.error)
+        return {...state, loading:false, error: action.error};
+    }),
+
+    on (addCourse, (state, action) => {
+        console.log('in add course description reducer')
+        return {...state, loading:true, error:undefined};
+    }),
+    on (addCourseSuccess, (state, action) => {
+        console.log('in add course success ',action.course.code)
+        return {...state, loading:false, 
+            descriptions: [...state.descriptions, action.course],  
+            error: undefined};
+    }),
+    on (addCourseFailure, (state, action) => {
+        console.log('in add course failure ',action.error)
         return {...state, loading:false, error: action.error};
     })
 );

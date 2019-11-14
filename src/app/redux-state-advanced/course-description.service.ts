@@ -20,7 +20,7 @@ export class CourseDescriptionService {
         delay(500)
       );
   }
-  addCourses(newCourse:ClassDescriptionState){
+  addCourse(newCourse:ClassDescription){
     console.log('in get courses')
     return this.httpClient.post(this.URL, newCourse)
       .pipe(

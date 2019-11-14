@@ -32,6 +32,8 @@ import { ReduxAdvPageComponent } from './redux-state-advanced/redux-adv-page/red
 import { ReduxAdvAddcourseComponent } from './redux-state-advanced/redux-adv-addcourse/redux-adv-addcourse.component';
 import { ReduxAdvRemovecourseComponent } from './redux-state-advanced/redux-adv-removecourse/redux-adv-removecourse.component'
 import { HttpClientModule } from '@angular/common/http';
+import { FirstServiceConsumerComponent } from './simple-content/first-service-consumer/first-service-consumer.component';
+import { SecondServiceConsumerComponent } from './simple-content/second-service-consumer/second-service-consumer.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReduxAdvPageComponent,
     ReduxAdvAddcourseComponent,
     ReduxAdvRemovecourseComponent,
+    FirstServiceConsumerComponent,
+    SecondServiceConsumerComponent,
   ],
   imports: [
     BrowserModule,

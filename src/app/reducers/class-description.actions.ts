@@ -9,3 +9,6 @@ export const deleteCourse = createAction('[Course Item] Delete Course', props<{i
 export const deleteCourseSuccess = createAction('[Class Item]Delete Course Success', props<{id:number}>())
 export const deleteCourseFailure = createAction('[Class Item]Delete Course Failure', props<{error: Error}>())
 
+export const addCourse = createAction('[Course Item] Add Course', props<{course:ClassDescription}>())
+export const addCourseSuccess = createAction('[Class Item]Add Course Success', props<{course:ClassDescription}>())
+export const addCourseFailure = createAction('[Class Item]Add Course Failure', props<{error: Error}>())

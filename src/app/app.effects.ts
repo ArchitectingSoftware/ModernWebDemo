@@ -9,7 +9,10 @@ import { loadCourseDescriptions,
           loadCourseFailure,
           deleteCourse,
           deleteCourseFailure,
-          deleteCourseSuccess } from './reducers/class-description.actions';
+          deleteCourseSuccess, 
+          addCourse,
+          addCourseSuccess,
+          addCourseFailure} from './reducers/class-description.actions';
 import { CourseDescriptionService } from './redux-state-advanced/course-description.service';
 import { of } from 'rxjs';
 
@@ -39,6 +42,18 @@ export class AppEffects {
         .pipe(
           map(data => deleteCourseSuccess({id:action.id})),
           catchError(error => of(loadCourseFailure({error:error})))
+        ))
+    )
+  );
+
+  addCourse = createEffect(
+    () => this.actions$.pipe(
+      ofType(addCourse),
+      exhaustMap(action =>
+        this.courseDescriptionService.addCourse(action.course)
+        .pipe(
+          map(data => addCourseSuccess({course:action.course})),
+          catchError(error => of(addCourseFailure({error:error})))
         ))
     )
   );
