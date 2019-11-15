@@ -42,6 +42,7 @@ export class ReduxAdvAddcourseComponent implements OnInit {
 
   onSubmit(){
     //let newItem: ClassItem = {id: this.counter++, name: this.tmpMessage};
+    console.log('tmp course = ', this.tmpCourse)
     this.store.dispatch(addCourse({course: this.tmpCourse}));
     this.tmpCourse = new ClassDescription();
     //form.reset();

@@ -43,52 +43,10 @@
       "title": "Software Engineering"
     },
     {
-      "id": 8,
-      "code": "CS350",
-      "level": "undergraduate",
-      "title": "Object Oriented Programming"
-    },
-    {
-      "id": 101,
-      "code": "cs123",
-      "level": "graduate",
-      "title": "test course"
-    },
-    {
-      "id": 12,
-      "code": "1222",
-      "level": "333",
-      "title": "132121"
-    },
-    {
-      "id": 200,
-      "code": "foo",
-      "level": "bar",
-      "title": "forbar"
-    },
-    {
-      "id": 232322,
-      "code": "asdf",
-      "level": "asdf",
-      "title": "asfd"
-    },
-    {
-      "id": 2001,
-      "code": "code1",
-      "level": "grad",
-      "title": "test"
-    },
-    {
-      "id": 2201,
-      "code": "code",
-      "level": "grad",
-      "title": "Will this work"
-    },
-    {
-      "id": 1212121234546,
-      "code": "fii",
-      "level": "bar",
-      "title": "baz"
+      "id": 123,
+      "code": "dsf",
+      "level": "adsf",
+      "title": "asdfas"
     }
   ]
 }
